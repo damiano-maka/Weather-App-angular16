@@ -1,0 +1,28 @@
+<div class="search text-center">
+    <form #form="ngForm" (submit)="onSubmit" >
+        <input
+        type="text"
+        name="city"
+        [(ngModel)]="initialCityName"
+        placeholder="Cerca Citta" />
+
+    <button type="submit" class="btn-ctm" (click)="onSubmit()">Search</button>
+    </form>
+</div> 
+<div class="card mt-3" style="width: 30rem;">
+    <div style="position: relative; text-align: center;">
+        <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; filter: drop-shadow(0 0 5px white);"><b>{{w.name}}</b> <br> {{w.main.temp | number: "1.0-0" }}°C</h1>
+        <img src="https://source.unsplash.com/random/200×200/?{{w.name}}" class="card-img" width="300px" height="300px"  alt="...">
+    </div>
+    <div class="card-body ">
+      <h2 class="card-title text-center">Weather Information</h2>
+    </div>
+    <ul class="list-group list-group-flush ">
+      <li class="list-group-item text-center"><h4>Weather : {{w.weather[0].main}}</h4><br> <img src="https://openweathermap.org/img/wn/{{w.weather[0].icon}}@2x.png" class="icons"  alt="..."> </li>
+      <li class="list-group-item">Minimum Temperature : {{w.main.temp_min | number: "1.0-0" }}°C </li>
+      <li class="list-group-item">Maximum Temperature : {{w.main.temp_max | number: "1.0-0" }}°C  </li>
+      <li class="list-group-item">Humidity : {{w.main.humidity}}%</li>
+      <li class="list-group-item">Feels like : {{w.main.feels_like| number: "1.0-0" }}°C</li>
+      <li class="list-group-item">Wind : Deg - {{w.wind.deg}}° | Speed - {{w.wind.speed}}</li>
+    </ul>
+  </div> 
