@@ -1,3 +1,5 @@
+
+<div class="container mt-2 col-12 col-sm-12 col-md-8 col-lg-5">
 <div class="search text-center">
     <form #form="ngForm" (submit)="onSubmit" >
         <input
@@ -9,7 +11,7 @@
     <button type="submit" class="btn-ctm" (click)="onSubmit()">Search</button>
     </form>
 </div> 
-<div class="card mt-3" style="width: 30rem;">
+<div class="card mt-2 mb-2 col-md-12">
     <div style="position: relative; text-align: center;">
         <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; filter: drop-shadow(0 0 5px white);"><b>{{w.name}}</b> <br> {{w.main.temp | number: "1.0-0" }}°C</h1>
         <img src="https://source.unsplash.com/random/200×200/?{{w.name}}" class="card-img" width="300px" height="300px"  alt="...">
@@ -26,3 +28,4 @@
       <li class="list-group-item">Wind : Deg - {{w.wind.deg}}° | Speed - {{w.wind.speed}}</li>
     </ul>
   </div> 
+</div>

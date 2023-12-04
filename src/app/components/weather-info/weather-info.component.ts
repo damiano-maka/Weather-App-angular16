@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ApiService } from './services/api.service';
+import { ApiService } from 'src/app/services/api.service';
 import { Subject, takeUntil } from 'rxjs';
 import { Response } from 'src/app/models/weather-response';
 @Component({
